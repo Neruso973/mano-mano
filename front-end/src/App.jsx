@@ -1,16 +1,15 @@
-import { useState } from "react";
-
-import Suggestion from "./components/Suggestion";
-import logo from "./logo.svg";
+import Manopotocard from "./components/Manopotocard";
 import "./App.css";
+import "./assets/css/manopotocard.css";
+import ColorContextProvider from "./context/ColorContextProvider";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <div className="App">
-      <Suggestion />
-    </div>
+    <ColorContextProvider>
+      <div className="App">
+        <Manopotocard />
+      </div>
+    </ColorContextProvider>
   );
 }
 
