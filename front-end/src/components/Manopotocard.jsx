@@ -25,7 +25,7 @@ function Manopotocard() {
               Projet Déco
             </h2>
             <div className="container mx-auto mt-20">
-              <div className="ml-28">
+              <div className="ml-96">
                 <Switch
                   checked={enabled}
                   onChange={setEnabled}
