@@ -1,4 +1,9 @@
-.cadre_radar {
+.cadre_suggestion {
+  position: relative;
   width: 25%;
   height: 50%;
+  overflow: hidden;
+  border-radius: 50px; /*1*/
+  border: 5px solid transparent; /*2*/
+  background: linear-gradient(45deg, #22aab3, #05e2c9) border-box;
 }

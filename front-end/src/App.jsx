@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import Radar from "./components/Radar";
+import Suggestion from "./components/Suggestion";
 import logo from "./logo.svg";
 import "./App.css";
 
@@ -9,7 +9,7 @@ function App() {
 
   return (
     <div className="App">
-      <Radar />
+      <Suggestion />
     </div>
   );
 }
