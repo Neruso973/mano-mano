@@ -1,10 +1,17 @@
-import { useState } from "react";
+import { useState, useContext, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { Switch } from "@headlessui/react";
 import bluePhone from "../assets/img/ManoPotoPhoneGreen.png";
 import pinkPhone from "../assets/img/ManoPotoPhonePink.png";
+import ColorContext from "../context/ColorContext";
 
 function Manopotocard() {
   const [enabled, setEnabled] = useState(true);
+  const { color, setColor } = useContext(ColorContext);
+
+  useEffect(() => {
+    setColor(enabled);
+  }, [enabled]);
 
   return (
     <div className="bg-[#F5F6F7] h-screen flex justify-center">
@@ -45,17 +52,20 @@ function Manopotocard() {
                 </Switch>
               </div>
             </div>
-            <h2 className="text-2xl text-[#22AAB3] fixed top-[51%] left-[70%]">Projet Brico</h2>
+            <h2 className="text-2xl text-[#22AAB3] fixed top-[51%] left-[70%]">
+              Projet Brico
+            </h2>
           </div>
-          <button
+          <Link
+            to="/analyse"
             className={
               enabled
-                ? "bg-gradient-to-r from-[#24A6B2] to-[#00ECCD] w-56 rounded-xl text-xl relative left-[70%] mt-12"
-                : "bg-gradient-to-r from-[#FFABC9] to-[#FFAD32] w-56 rounded-xl text-xl relative left-[70%] mt-12"
+                ? "bg-gradient-to-r from-[#24A6B2] to-[#00ECCD] w-56 rounded-xl text-xl relative left-[70%] mt-4 p-2"
+                : "bg-gradient-to-r from-[#FFABC9] to-[#FFAD32] w-56 rounded-xl text-xl relative left-[70%] mt-4 p-2"
             }
           >
             Envoyer à Mano Poto
-          </button>
+          </Link>
         </div>
       </div>
     </div>
