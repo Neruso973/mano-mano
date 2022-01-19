@@ -1,10 +1,14 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { Switch } from "@headlessui/react";
 import bluePhone from "../assets/img/ManoPotoPhoneGreen.png";
 import pinkPhone from "../assets/img/ManoPotoPhonePink.png";
+import bluePhoto from "../assets/img/ManoPotoPhotoGreen.png";
+import pinkPhoto from "../assets/img/ManoPotoPhotoPink.png";
 
 function Manopotocard() {
   const [enabled, setEnabled] = useState(true);
+
+  const fileInput = useRef();
 
   return (
     <div className="bg-[#F5F6F7] h-screen flex justify-center">
@@ -47,6 +51,10 @@ function Manopotocard() {
             </div>
             <h2 className="text-2xl text-[#22AAB3] fixed top-[51%] left-[70%]">Projet Brico</h2>
           </div>
+          <label htmlFor="photo" onClick={() => {fileInput.current.click()}}>
+              <img src={enabled ? bluePhoto : pinkPhoto} alt="" className="cursor-pointer w-12 fixed left-[60%] mt-9" />
+          <input type="file" name="photo" className="hidden" ref={(el) => {fileInput.current= el}}/>
+          </label>
           <button
             className={
               enabled
