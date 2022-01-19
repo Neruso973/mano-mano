@@ -1,15 +1,12 @@
-import { useState } from "react";
-
-import Radar from "./components/Radar";
-import logo from "./logo.svg";
-import "./App.css";
+import Manopotocard from './components/Manopotocard'
+import './App.css'
+import "./assets/css/manopotocard.css"
 
 function App() {
-  const [count, setCount] = useState(0);
 
   return (
     <div className="App">
-      <Radar />
+      <Manopotocard />
     </div>
   );
 }
