@@ -1,0 +1,28 @@
+.analyse_container {
+  position: relative;
+  width: 250px;
+  height: 250px;
+}
+
+.analyse_container > img {
+  animation: rotate_analyse infinite 5s linear;
+}
+
+.analyse_text {
+  position: absolute;
+  top: 30%;
+  left: 15%;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+@keyframes rotate_analyse {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

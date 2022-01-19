@@ -1,4 +1,4 @@
-import photo from "../asset/img/IMG_20220119_133444.jpg";
+import photo from "../assets/img/IMG_20220119_133444.jpg";
 
 const Radar = () => {
   return (

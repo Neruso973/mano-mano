@@ -1,9 +1,15 @@
-import { useState } from "react";
+import { useContext, useEffect, useState } from "react";
 
 import { Switch } from "@headlessui/react";
+import ColorContext from "../context/ColorContext";
 
 function Manopotocard() {
   const [enabled, setEnabled] = useState(true);
+  const { color, setColor } = useContext(ColorContext);
+
+  useEffect(() => {
+    setColor(enabled);
+  }, [enabled]);
 
   return (
     <div className="bg-[#F5F6F7]">
