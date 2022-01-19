@@ -10,7 +10,7 @@ function Manopotocard() {
     <div className="bg-[#F5F6F7] h-screen flex justify-center">
       <div className="bg-white  h-[50%] w-[70%] flex rounded-3xl mt-48 p-8">
         <img src={enabled ? bluePhone : pinkPhone} alt="" />
-        <div className="flex flex-col">
+        <div className="flex flex-col px-12 py-8">
           <div className="text-[#2A468D] text-2xl">
             <p>ManoPoto, l’assistant photo par ManoMano</p>
             <p>
