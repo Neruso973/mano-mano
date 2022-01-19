@@ -10,7 +10,11 @@
     "@headlessui/react": "^1.4.3",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+<<<<<<< HEAD
     "react-notifications-component": "^3.1.0"
+=======
+    "react-router-dom": "^6.2.1"
+>>>>>>> 26a78043866ed5c40b140408312285c60c90be6c
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^1.0.7",
