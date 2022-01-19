@@ -1,3 +1,5 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 import Manopotocard from "./components/Manopotocard";
 import "./App.css";
 import "./assets/css/manopotocard.css";
@@ -8,8 +10,12 @@ function App() {
   return (
     <ColorContextProvider>
       <div className="App">
-        <Manopotocard />
-        <Analyse />
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Manopotocard />} />
+            <Route path="/analyse" element={<Analyse />} />
+          </Routes>
+        </BrowserRouter>
       </div>
     </ColorContextProvider>
   );
