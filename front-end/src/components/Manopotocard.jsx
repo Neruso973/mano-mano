@@ -1,18 +1,12 @@
-<<<<<<< HEAD
-import { useState, useRef } from "react";
+import { useState, useRef, useContext, useEffect } from "react";
 import { Switch } from "@headlessui/react";
+import { Link } from "react-router-dom";
+
 import bluePhone from "../assets/img/ManoPotoPhoneGreen.png";
 import pinkPhone from "../assets/img/ManoPotoPhonePink.png";
 import bluePhoto from "../assets/img/ManoPotoPhotoGreen.png";
 import pinkPhoto from "../assets/img/ManoPotoPhotoPink.png";
-=======
-import { useState, useContext, useEffect } from "react";
-import { Link } from "react-router-dom";
-import { Switch } from "@headlessui/react";
-import bluePhone from "../assets/img/ManoPotoPhoneGreen.png";
-import pinkPhone from "../assets/img/ManoPotoPhonePink.png";
 import ColorContext from "../context/ColorContext";
->>>>>>> 26a78043866ed5c40b140408312285c60c90be6c
 
 function Manopotocard() {
   const [enabled, setEnabled] = useState(true);
