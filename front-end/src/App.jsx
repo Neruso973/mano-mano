@@ -17,7 +17,10 @@ function App() {
         <Routes>
           <Route path="/" element={<Manopotocard />} />
           <Route path="/analyse" element={<Analyse />} />
+<<<<<<< HEAD
           <Route path="/suggestion" element={<Suggestion />} />
+=======
+>>>>>>> aacddb21668bc5d5bdfd8bb91f7fa1f846fbf9e8
         </Routes>
       </BrowserRouter>
     </ColorContextProvider>
