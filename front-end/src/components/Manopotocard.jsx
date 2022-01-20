@@ -60,7 +60,7 @@ function Manopotocard() {
               Vous avez une tâche à réaliser mais vous ne savez pas par où
               commencer ?
             </p>
-            <p>Ouvert aux suggestions {enabled ? "brico" : "déco"}? </p>
+            <p>Ouvert aux suggestions {enabled ? <span className="text-[#24A6B2]">brico</span> :<span className="text-[#FFAD32]">déco</span>}? </p>
             <p>Envoyez votre photo à ManoPoto poutr commencer votre projet.</p>
           </div>
           <div className="flex flex-row">
