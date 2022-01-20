@@ -1,10 +1,20 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+
 import backGreen from "../assets/img/ManoPotoBackGreen.png";
 import backPink from "../assets/img/ManoPotoBackPink.png";
 import ColorContext from "../context/ColorContext";
 
 const Analyse = () => {
   const { color } = useContext(ColorContext);
+  let navigate = useNavigate();
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      navigate("/suggestion");
+    }, 3000);
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <div className="bg-[#F5F6F7] h-screen flex justify-center">
