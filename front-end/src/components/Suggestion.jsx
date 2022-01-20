@@ -2,24 +2,13 @@ import { useContext, useState } from "react";
 
 import ColorContext from "../context/ColorContext";
 import photo from "../assets/img/IMG_20220119_133444.jpg";
+import cable from "../assets/img/cable.png";
+import etagere from "../assets/img/etagere.png";
+import trace from "../assets/img/trace.png";
+import lampadaire from "../assets/img/lampadaire.png";
 
 const Suggestion = () => {
   const { color } = useContext(ColorContext);
-  const [check1, setCheck1] = useState(true);
-  const [check2, setCheck2] = useState(true);
-  const [check3, setCheck3] = useState(true);
-
-  const toggleCheck1 = () => {
-    setCheck1(!check1);
-  };
-
-  const toggleCheck2 = () => {
-    setCheck2(!check2);
-  };
-
-  const toggleCheck3 = () => {
-    setCheck3(!check3);
-  };
 
   return (
     <div className="bg-[#F5F6F7] h-screen flex justify-center">
@@ -50,20 +39,11 @@ const Suggestion = () => {
             <div className="container_text">
               <div className="flex items-center m-4">
                 <div
-                  onClick={toggleCheck1}
                   className={`${
                     color ? "green_gradient" : "pink_gradient"
                   } checkbox  `}
                 >
-                  <div className="background_checkbox grey_background">
-                    {check1 ? (
-                      ""
-                    ) : color ? (
-                      <div className="check green_gradient"></div>
-                    ) : (
-                      <div className="check pink_gradient"></div>
-                    )}
-                  </div>
+                  {color ? <img src={etagere} /> : <img src={trace} />}
                 </div>
                 {color ? (
                   <p className="green_gradient">
@@ -77,20 +57,11 @@ const Suggestion = () => {
               </div>
               <div className="flex  items-center m-4">
                 <div
-                  onClick={toggleCheck2}
                   className={`${
                     color ? "green_gradient" : "pink_gradient"
                   } checkbox  `}
                 >
-                  <div className="background_checkbox grey_background">
-                    {check2 ? (
-                      ""
-                    ) : color ? (
-                      <div className="check green_gradient"></div>
-                    ) : (
-                      <div className="check pink_gradient"></div>
-                    )}
-                  </div>
+                  {color ? <img src={trace} /> : <img src={lampadaire} />}
                 </div>
                 {color ? (
                   <p className="green_gradient">Retouches peintures ?</p>
@@ -100,20 +71,11 @@ const Suggestion = () => {
               </div>
               <div className="flex  items-center m-4">
                 <div
-                  onClick={toggleCheck3}
                   className={`${
                     color ? "green_gradient" : "pink_gradient"
-                  } checkbox  `}
+                  } checkbox`}
                 >
-                  <div className="background_checkbox grey_background">
-                    {check3 ? (
-                      ""
-                    ) : color ? (
-                      <div className="check green_gradient"></div>
-                    ) : (
-                      <div className="check pink_gradient"></div>
-                    )}
-                  </div>
+                  {color ? <img src={cable} /> : <img src={etagere} />}
                 </div>
                 {color ? (
                   <p className="green_gradient">
