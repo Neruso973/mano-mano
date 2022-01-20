@@ -1,4 +1,5 @@
 import { useContext, useState } from "react";
+import { Link } from "react-router-dom";
 
 import ColorContext from "../context/ColorContext";
 import photo from "../assets/img/IMG_20220119_133444.jpg";
@@ -13,7 +14,7 @@ const Suggestion = () => {
   const [openModal, setOpenModal] = useState(false);
 
   return (
-      <div className="bg-[#F5F6F7] h-screen flex justify-center" onClick={() => {openModal && setOpenModal(false)}}>
+      <div className="bg-[#F5F6F7] h-screen flex justify-center" onClick={() => {openModal &&setOpenModal(false)}}>
         {!openModal ? (<div className="bg-white  h-[80%] w-[80%] flex justify-around items-center rounded-3xl mt-24 p-2">
           <div
             className={`${
@@ -48,9 +49,11 @@ const Suggestion = () => {
                     {color ? <img src={etagere} /> : <img src={trace} />}
                   </div>
                   {color ? (
-                    <p className="green_gradient">
+                    <Link to="/starter" className="green_gradient text-white rounded-2xl p-4">
+                    <p>
                       Mettre une étagère à niveau ?
                     </p>
+                    </Link>
                   ) : (
                     <p className="pink_gradient">
                       Mettre de la couleur sur le mur
