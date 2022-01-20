@@ -2,9 +2,13 @@ import { useContext, useState } from "react";
 
 import ColorContext from "../context/ColorContext";
 import photo from "../assets/img/IMG_20220119_133444.jpg";
+import CurrentTask from "./currentTask";
 
 const Suggestion = () => {
   const { color } = useContext(ColorContext);
+
+  const [openModal, setOpenModal] = useState(false)
+
   const [check1, setCheck1] = useState(true);
   const [check2, setCheck2] = useState(true);
   const [check3, setCheck3] = useState(true);
@@ -130,7 +134,7 @@ const Suggestion = () => {
                 D’autres envies ?
               </p>
               {color ? (
-                <h2 className="green_text underline decoration-solid  ">
+                <h2 className="green_text underline decoration-solid" onClick={()=>setOpenModal(true)}>
                   Voir la sélectionde tâches courantes et leurs solutions{" "}
                 </h2>
               ) : (
@@ -142,6 +146,7 @@ const Suggestion = () => {
           </div>
         </div>
       </div>
+      {openModal && <CurrentTask open={openModal} />}
     </div>
   );
 };

@@ -1,13 +1,15 @@
 import { useContext, useState } from "react";
 import ColorContext from "../context/ColorContext";
 
-function CurrentTask() {
+function CurrentTask( open ) {
+  
   const { color } = useContext(ColorContext);
+
   return (
     <div className="bg-[#F5F6F7] h-screen flex justify-center">
       <div className="bg-white  h-[80%] w-[80%] flex flex-col justify-around items-center rounded-3xl mt-24 p-2">
           <div className="blue_text text-lg text-left mx-0 font-bold w-[80%]">
-        <p className="my-4">
+        <p className="my-2">
           Parce-qu’il n’est pas toujoursfacile de se retrouver seul(e) face à
           ses traveaux d’intérieur, ManoMano vous propose ses <span className="green_text">ManoTuto :</span>
         </p>
@@ -20,7 +22,7 @@ function CurrentTask() {
           Dites nous quel sera votre prochain projet et ManoTuto fera le reste
           😉
         </p>
-        <h2 className="text-4xl mt-12">Tâches courantes :</h2>
+        <h2 className="text-4xl mt-8">Tâches courantes :</h2>
           </div>
         <div className="flex justify-between w-[80%] text-white">
           <div className="flex flex-col">
