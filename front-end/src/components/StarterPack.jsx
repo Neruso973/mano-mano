@@ -1,10 +1,13 @@
-import { Link } from "react-router-dom";
-
 import details from "../assets/img/DetailPackPlan_de_travail_34.png";
 import level from "../assets/img/Difficulte.png";
 import other from "../assets/img/ArticlesSuppBricoPlan_de_travail_47.png";
+import ColorContext from "../context/ColorContext";
+import { useContext } from "react";
 
 function StarterPack() {
+
+    const { basket, setBasket } = useContext(ColorContext);
+
   return (
     <div>
       <div className="mt-16 flex flex-col justify-center">
@@ -20,10 +23,10 @@ function StarterPack() {
           <div className="relative flex flex-col w-[50%]">
             <h2 className="green_text text-2xl">Votre pack comprend: </h2>
             <img src={details} />
-            <Link
-              to="/"
+            <div
               className="absolute w-7/12 h-12 bottom-20 right-14 cursor-pointer"
-            ></Link>
+              onClick={() => setBasket(true)}
+            ></div>
           </div>
         </div>
       </div>

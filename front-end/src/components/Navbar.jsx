@@ -1,5 +1,6 @@
-import React from "react";
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import ColorContext from "../context/ColorContext";
 
 import NavbarUp from "../assets/img/NavbarUp.png";
 import EmptyCart from "../assets/img/NavCartEmpty.png";
@@ -17,11 +18,16 @@ import Navlink10 from "../assets/img/Navlink10.png";
 import Navlink11 from "../assets/img/Navlink11.png";
 
 const Navbar = () => {
+
+  const { basket } = useContext(ColorContext);
+
   return (
     <div className="bg-white fixed shadow w-full z-10">
       <div className="flex justify-center align-top h-16">
         <img src={NavbarUp} />
-        <img src={EmptyCart} />
+        <Link to="/basket">
+        <img src={!basket ? EmptyCart : FullCart} />
+        </Link>
       </div>
       <div className="flex justify-center align-top h-10">
         <img
