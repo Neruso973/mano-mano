@@ -8,7 +8,7 @@ import "./App.css";
 import "./assets/css/manopotocard.css";
 import ColorContextProvider from "./context/ColorContextProvider";
 import Analyse from "./components/Analyse";
-
+import Basket from "./components/Basket";
 import StarterPack from "./components/StarterPack";
 
 function App() {
@@ -21,6 +21,7 @@ function App() {
           <Route path="/analyse" element={<Analyse />} />
           <Route path="/suggestion" element={<Suggestion />} />
           <Route path="/starter" element={<StarterPack />} />
+          <Route path="/basket" element={<Basket />} />
         </Routes>
       </BrowserRouter>
     </ColorContextProvider>
