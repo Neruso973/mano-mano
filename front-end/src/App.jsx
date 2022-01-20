@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import ReactNotification from 'react-notifications-component'
-import 'react-notifications-component/dist/theme.css'
+import ReactNotification from "react-notifications-component";
+import "react-notifications-component/dist/theme.css";
 
 import Manopotocard from "./components/Manopotocard";
 import "./App.css";
@@ -11,13 +11,13 @@ import Analyse from "./components/Analyse";
 function App() {
   return (
     <ColorContextProvider>
-        <BrowserRouter>
-    <ReactNotification />
-          <Routes>
-            <Route path="/" element={<Manopotocard />} />
-            <Route path="/analyse" element={<Analyse />} />
-          </Routes>
-        </BrowserRouter>
+      <BrowserRouter>
+        <ReactNotification />
+        <Routes>
+          <Route path="/" element={<Manopotocard />} />
+          <Route path="/analyse" element={<Analyse />} />
+        </Routes>
+      </BrowserRouter>
     </ColorContextProvider>
   );
 }

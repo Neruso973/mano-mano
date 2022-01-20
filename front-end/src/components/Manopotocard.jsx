@@ -20,10 +20,24 @@ function Manopotocard() {
   const fileInput = useRef();
 
   const upload = () => {
-    fileInput.current.click()
-        store.addNotification({
+      if(enabled){
+    timeoutEnable = setTimeout(
+       () => {store.addNotification({
+        message: "photo importé",
+        type: "info",
+        insert: "top",
+        container: "top-right",
+        dismiss: {
+          duration: 5000,
+          onScreen: true
+        }
+      })}, 5000);
+    }
+    else {
+        timeoutDisable = setTimeout(
+       () => {store.addNotification({
             message: "photo importé",
-            type: "info",
+            type: "warning",
             insert: "top",
             container: "top-right",
             dismiss: {
@@ -31,6 +45,7 @@ function Manopotocard() {
               onScreen: true
             }
           })
+    }, 5000)}
   }
 
   return (
@@ -76,8 +91,8 @@ function Manopotocard() {
               Projet Brico
             </h2>
           </div>
-          <label htmlFor="photo" onClick={upload}>
-              <img src={enabled ? bluePhoto : pinkPhoto} alt="" className="cursor-pointer w-12 fixed left-[60%] mt-9" />
+          <label htmlFor="photo" onClick={() => fileInput.current.click()}>
+              <img src={enabled ? bluePhoto : pinkPhoto} alt="" className="cursor-pointer w-12 fixed left-[60%] mt-9" onClick={upload}/>
           <input type="file" name="photo" className="hidden" ref={(el) => {fileInput.current= el}}/>
           </label>
           <Link
