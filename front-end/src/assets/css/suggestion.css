@@ -1,0 +1,92 @@
+.green_gradient {
+  background: linear-gradient(45deg, #24a6b2, #00eccd) border-box;
+}
+
+.pink_gradient {
+  background: linear-gradient(45deg, #ffabc9, #ffad32) border-box;
+}
+
+.grey_background {
+  background-color: #f5f6f7;
+}
+
+.text_white {
+  color: white;
+}
+
+.blue_text {
+  color: #2a468d;
+}
+
+.green_text {
+  color: #22aab3;
+}
+
+.pink_text {
+  color: #ffad32;
+}
+
+.container_scanner {
+  width: 30%;
+  height: 70%;
+  overflow: hidden;
+  border-radius: 50px; /*1*/
+  border: 5px solid transparent; /*2*/
+}
+
+.container_suggestion {
+  width: 60%;
+  height: 90%;
+}
+
+.container_text {
+  width: 80%;
+}
+
+.text_suggestion {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin: 1rem;
+}
+
+.checkbox {
+  width: 100px;
+  height: 100px;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-right: 7rem;
+  overflow: hidden;
+  border: 5px solid transparent; /*2*/
+}
+
+.checkbox > img {
+  width: 100%;
+  height: 100%;
+}
+
+.background_checkbox {
+  width: 90px;
+  height: 90px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container_text > div > p {
+  padding: 1rem;
+  border-radius: 15px;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
