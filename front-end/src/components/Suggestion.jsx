@@ -62,9 +62,11 @@ const Suggestion = () => {
                       <p>Mettre une étagère à niveau ?</p>
                     </Link>
                   ) : (
-                    <p className="pink_gradient">
+                    <Link to="/color">
+                    <p className="pink_gradient green_gradient text-white rounded-2xl p-4">
                       Mettre de la couleur sur le mur
                     </p>
+                    </Link>
                   )}
                 </div>
                 <div className="flex  items-center m-4">
@@ -111,11 +113,10 @@ const Suggestion = () => {
                     Voir la sélectionde tâches courantes et leurs solutions{" "}
                   </h2>
                 ) : (
-                  <Link to="/color">
+                  
                     <h2 className="pink_text underline decoration-solid ">
                       Voir la sélection de meubles et déco pour le salon
                     </h2>
-                  </Link>
                 )}
               </div>
             </div>
