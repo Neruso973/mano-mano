@@ -55,9 +55,12 @@ const Suggestion = () => {
                     {color ? <img src={etagere} /> : <img src={trace} />}
                   </div>
                   {color ? (
-                    <p className="green_gradient">
-                      Mettre une étagère à niveau ?
-                    </p>
+                    <Link
+                      to="/starter"
+                      className="green_gradient text-white rounded-2xl p-4"
+                    >
+                      <p>Mettre une étagère à niveau ?</p>
+                    </Link>
                   ) : (
                     <p className="pink_gradient">
                       Mettre de la couleur sur le mur
