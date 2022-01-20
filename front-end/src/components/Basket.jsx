@@ -3,7 +3,7 @@ import bg from '../assets/img/PanierBrico.png';
 function Basket() {
   return (
   <div>
-      <img src={bg} alt="" />
+      <img src={bg} className='w-full' />
   </div>
 );
 }
