@@ -28,7 +28,7 @@ function Manopotocard() {
           insert: "top",
           container: "top-right",
           dismiss: {
-            duration: 5000,
+            duration: 2000,
             onScreen: true,
           },
         });
@@ -41,7 +41,7 @@ function Manopotocard() {
           insert: "top",
           container: "top-right",
           dismiss: {
-            duration: 5000,
+            duration: 2000,
             onScreen: true,
           },
         });
