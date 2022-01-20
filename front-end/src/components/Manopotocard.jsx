@@ -50,9 +50,9 @@ function Manopotocard() {
   };
 
   return (
-    <div className="bg-[#F5F6F7] h-screen flex justify-center">
+    <div className="flex justify-center">
       <div className="bg-white  h-[50%] w-[70%] flex rounded-3xl mt-48 p-8">
-        <img src={enabled ? bluePhone : pinkPhone} alt="" />
+        <img className="w-1/3" src={enabled ? bluePhone : pinkPhone} alt="" />
         <div className="flex flex-col px-12 py-8">
           <div className="text-[#2A468D] text-2xl">
             <p>ManoPoto, l’assistant photo par ManoMano</p>
@@ -112,8 +112,8 @@ function Manopotocard() {
             to="/analyse"
             className={
               enabled
-                ? "bg-gradient-to-r from-[#24A6B2] to-[#00ECCD] w-56 rounded-xl text-xl relative left-[70%] mt-10 p-2"
-                : "bg-gradient-to-r from-[#FFABC9] to-[#FFAD32] w-56 rounded-xl text-xl relative left-[70%] mt-10 p-2"
+                ? "bg-gradient-to-r from-[#24A6B2] to-[#00ECCD] w-56 rounded-xl text-xl relative left-[70%] mt-10 p-2 text-white"
+                : "bg-gradient-to-r from-[#FFABC9] to-[#FFAD32] w-56 rounded-xl text-xl relative left-[70%] mt-10 p-2 text-white"
             }
           >
             Envoyer à Mano Poto

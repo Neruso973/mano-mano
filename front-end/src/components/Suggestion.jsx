@@ -15,7 +15,7 @@ const Suggestion = () => {
 
   return (
     <div
-      className="bg-[#F5F6F7] h-screen flex justify-center"
+      className="flex justify-center"
       onClick={() => {
         openModal && setOpenModal(false);
       }}

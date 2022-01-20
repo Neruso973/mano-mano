@@ -12,12 +12,12 @@ const Analyse = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       navigate("/suggestion");
-    }, 3000);
+    }, 2000);
     return () => clearTimeout(timer);
   }, []);
 
   return (
-    <div className="bg-[#F5F6F7] h-screen flex justify-center">
+    <div className="flex justify-center">
       <div className="bg-white  h-[50%] w-[70%] flex justify-center items-center rounded-3xl mt-48 p-8">
         <div className="analyse_container">
           {color ? (
@@ -27,7 +27,7 @@ const Analyse = () => {
           )}
           <div className="analyse_text">
             <p>ManoPoto</p>
-            <p>Analyse ta photo</p>
+            <p>Analyse ta</p>
             <p>photo ...</p>
           </div>
         </div>
