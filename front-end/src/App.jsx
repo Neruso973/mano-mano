@@ -3,6 +3,7 @@ import ReactNotification from "react-notifications-component";
 import "react-notifications-component/dist/theme.css";
 
 import Manopotocard from "./components/Manopotocard";
+import Suggestion from "./components/Suggestion";
 import "./App.css";
 import "./assets/css/manopotocard.css";
 import ColorContextProvider from "./context/ColorContextProvider";
@@ -16,6 +17,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Manopotocard />} />
           <Route path="/analyse" element={<Analyse />} />
+          <Route path="/suggestion" element={<Suggestion />} />
         </Routes>
       </BrowserRouter>
     </ColorContextProvider>
