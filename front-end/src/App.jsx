@@ -9,7 +9,7 @@ import "./assets/css/manopotocard.css";
 import ColorContextProvider from "./context/ColorContextProvider";
 import Analyse from "./components/Analyse";
 
-import CurrentTask from "./components/CurrentTask";
+import StarterPack from "./components/StarterPack";
 
 function App() {
   return (
@@ -20,7 +20,7 @@ function App() {
           <Route path="/" element={<Manopotocard />} />
           <Route path="/analyse" element={<Analyse />} />
           <Route path="/suggestion" element={<Suggestion />} />
-          <Route path="/taches" element={<CurrentTask />} />
+          <Route path="/starter" element={<StarterPack />} />
         </Routes>
       </BrowserRouter>
     </ColorContextProvider>

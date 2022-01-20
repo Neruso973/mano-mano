@@ -13,8 +13,14 @@ const Suggestion = () => {
   const [openModal, setOpenModal] = useState(false);
 
   return (
-      <div className="bg-[#F5F6F7] h-screen flex justify-center" onClick={() => {openModal && setOpenModal(false)}}>
-        {!openModal ? (<div className="bg-white  h-[80%] w-[80%] flex justify-around items-center rounded-3xl mt-24 p-2">
+    <div
+      className="bg-[#F5F6F7] h-screen flex justify-center"
+      onClick={() => {
+        openModal && setOpenModal(false);
+      }}
+    >
+      {!openModal ? (
+        <div className="bg-white  h-[80%] w-[80%] flex justify-around items-center rounded-3xl mt-24 p-2">
           <div
             className={`${
               color ? "green_gradient" : "pink_gradient"
@@ -48,9 +54,11 @@ const Suggestion = () => {
                     {color ? <img src={etagere} /> : <img src={trace} />}
                   </div>
                   {color ? (
-                    <p className="green_gradient">
-                      Mettre une étagère à niveau ?
-                    </p>
+                    <Link to="/starter">
+                      <p className="green_gradient">
+                        Mettre une étagère à niveau ?
+                      </p>
+                    </Link>
                   ) : (
                     <p className="pink_gradient">
                       Mettre de la couleur sur le mur
@@ -108,10 +116,11 @@ const Suggestion = () => {
               </div>
             </div>
           </div>
-        </div>) : (
-          <CurrentTask />
-        )}
-      </div>
+        </div>
+      ) : (
+        <CurrentTask />
+      )}
+    </div>
   );
 };
 
