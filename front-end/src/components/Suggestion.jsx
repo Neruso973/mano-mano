@@ -7,15 +7,21 @@ import cable from "../assets/img/cable.png";
 import etagere from "../assets/img/etagere.png";
 import trace from "../assets/img/trace.png";
 import lampadaire from "../assets/img/lampadaire.png";
-import CurrentTask from "./currentTask";
+import CurrentTask from "./CurrentTask";
 
 const Suggestion = () => {
   const { color } = useContext(ColorContext);
   const [openModal, setOpenModal] = useState(false);
 
   return (
-      <div className="bg-[#F5F6F7] h-screen flex justify-center" onClick={() => {openModal &&setOpenModal(false)}}>
-        {!openModal ? (<div className="bg-white  h-[80%] w-[80%] flex justify-around items-center rounded-3xl mt-24 p-2">
+    <div
+      className="bg-[#F5F6F7] h-screen flex justify-center"
+      onClick={() => {
+        openModal && setOpenModal(false);
+      }}
+    >
+      {!openModal ? (
+        <div className="bg-white  h-[80%] w-[80%] flex justify-around items-center rounded-3xl mt-24 p-2">
           <div
             className={`${
               color ? "green_gradient" : "pink_gradient"
@@ -49,10 +55,11 @@ const Suggestion = () => {
                     {color ? <img src={etagere} /> : <img src={trace} />}
                   </div>
                   {color ? (
-                    <Link to="/starter" className="green_gradient text-white rounded-2xl p-4">
-                    <p>
-                      Mettre une étagère à niveau ?
-                    </p>
+                    <Link
+                      to="/starter"
+                      className="green_gradient text-white rounded-2xl p-4"
+                    >
+                      <p>Mettre une étagère à niveau ?</p>
                     </Link>
                   ) : (
                     <p className="pink_gradient">
@@ -104,17 +111,20 @@ const Suggestion = () => {
                     Voir la sélectionde tâches courantes et leurs solutions{" "}
                   </h2>
                 ) : (
-                  <h2 className="pink_text underline decoration-solid ">
-                    Voir la sélection de meubles et déco pour le salon
-                  </h2>
+                  <Link to="/color">
+                    <h2 className="pink_text underline decoration-solid ">
+                      Voir la sélection de meubles et déco pour le salon
+                    </h2>
+                  </Link>
                 )}
               </div>
             </div>
           </div>
-        </div>) : (
-          <CurrentTask />
-        )}
-      </div>
+        </div>
+      ) : (
+        <CurrentTask />
+      )}
+    </div>
   );
 };
 
