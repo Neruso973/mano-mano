@@ -18,7 +18,7 @@ import Navlink11 from "../assets/img/Navlink11.png";
 
 const Navbar = () => {
   return (
-    <div className="bg-white fixed shadow w-full">
+    <div className="bg-white fixed shadow w-full z-10">
       <div className="flex justify-center align-top h-16">
         <img src={NavbarUp} />
         <img src={EmptyCart} />
