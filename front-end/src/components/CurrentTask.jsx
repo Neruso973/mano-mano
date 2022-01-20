@@ -1,13 +1,12 @@
 import { useContext, useState } from "react";
 import ColorContext from "../context/ColorContext";
 
-function CurrentTask( open ) {
+function CurrentTask() {
   
   const { color } = useContext(ColorContext);
 
   return (
-    <div className="bg-[#F5F6F7] h-screen flex justify-center">
-      <div className="bg-white  h-[80%] w-[80%] flex flex-col justify-around items-center rounded-3xl mt-24 p-2">
+      <div className="bg-white  h-[80%] w-[80%] flex flex-col justify-around items-center rounded-3xl mt-24 p-2 fixed top-0">
           <div className="blue_text text-lg text-left mx-0 font-bold w-[80%]">
         <p className="my-2">
           Parce-qu’il n’est pas toujoursfacile de se retrouver seul(e) face à
@@ -42,7 +41,6 @@ function CurrentTask( open ) {
         </div>
         <input type="text" placeholder="Autre" className="rounded-3xl border-solid border-2 my-8 p-2 w-[20%]" />
       </div>
-    </div>
   );
 }
 
