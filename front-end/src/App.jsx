@@ -4,6 +4,7 @@ import "react-notifications-component/dist/theme.css";
 
 import Manopotocard from "./components/Manopotocard";
 import Suggestion from "./components/Suggestion";
+import Color from "./components/Color";
 import "./App.css";
 import "./assets/css/manopotocard.css";
 import ColorContextProvider from "./context/ColorContextProvider";
@@ -21,6 +22,7 @@ function App() {
           <Route path="/analyse" element={<Analyse />} />
           <Route path="/suggestion" element={<Suggestion />} />
           <Route path="/taches" element={<CurrentTask />} />
+          <Route path="/color" element={<Color />} />
         </Routes>
       </BrowserRouter>
     </ColorContextProvider>
