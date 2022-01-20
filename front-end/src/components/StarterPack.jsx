@@ -14,8 +14,8 @@ function StarterPack() {
               {" "}
               Mettre une étagère à niveau ?
             </h2>
-            <div className="w-[100%] h-[40%] bg-black my-6 mx-8"></div>
-            <img src={level} className="w-[50%] mx-24 my-4" />
+            <iframe className="w-[100%] h-[40%] ml-12 mt-12" src="https://www.youtube.com/embed/c2NoIAvKdjk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen />
+            <img src={level} className="w-[50%] mx-32 my-20" />
           </div>
           <div className="relative flex flex-col w-[50%]">
             <h2 className="green_text text-2xl">Votre pack comprend: </h2>
