@@ -60,15 +60,21 @@ function Manopotocard() {
               Vous avez une tâche à réaliser mais vous ne savez pas par où
               commencer ?
             </p>
-            <p>Ouvert aux suggestions {enabled ? <span className="text-[#24A6B2]">brico</span> :<span className="text-[#FFAD32]">déco</span>}? </p>
+            <p>
+              Ouvert aux suggestions{" "}
+              {enabled ? (
+                <span className="text-[#24A6B2]">brico</span>
+              ) : (
+                <span className="text-[#FFAD32]">déco</span>
+              )}
+              ?{" "}
+            </p>
             <p>Envoyez votre photo à ManoPoto poutr commencer votre projet.</p>
           </div>
-          <div className="flex flex-row">
-            <h2 className="text-2xl text-[#FFAD32] fixed top-[51%] left-[50%]">
-              Projet Déco
-            </h2>
-            <div className="container mx-auto mt-20">
-              <div className="ml-96">
+          <div className="flex items-center justify-center mt-12">
+            <h2 className="text-2xl text-[#FFAD32] ">Projet Déco</h2>
+            <div className="">
+              <div className="">
                 <Switch
                   checked={enabled}
                   onChange={setEnabled}
@@ -77,7 +83,7 @@ function Manopotocard() {
                       ? "bg-gradient-to-r from-[#24A6B2] to-[#00ECCD]"
                       : "bg-gradient-to-r from-[#FFABC9] to-[#FFAD32]"
                   }
-          relative inline-flex flex-shrink-0 h-[38px] w-[74px] border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200 focus:outline-none focus-visible:ring-2  focus-visible:ring-white focus-visible:ring-opacity-75`}
+          inline-flex flex-shrink-0 h-[38px] w-[74px] border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200 focus:outline-none focus-visible:ring-2  focus-visible:ring-white focus-visible:ring-opacity-75`}
                 >
                   <span className="sr-only">Use setting</span>
                   <span
@@ -88,9 +94,7 @@ function Manopotocard() {
                 </Switch>
               </div>
             </div>
-            <h2 className="text-2xl text-[#22AAB3] fixed top-[51%] left-[70%]">
-              Projet Brico
-            </h2>
+            <h2 className="text-2xl text-[#22AAB3]">Projet Brico</h2>
           </div>
           <label htmlFor="photo" onClick={() => fileInput.current.click()}>
             <img
@@ -112,8 +116,8 @@ function Manopotocard() {
             to="/analyse"
             className={
               enabled
-                ? "bg-gradient-to-r from-[#24A6B2] to-[#00ECCD] w-56 rounded-xl text-xl relative left-[70%] mt-10 p-2 text-white"
-                : "bg-gradient-to-r from-[#FFABC9] to-[#FFAD32] w-56 rounded-xl text-xl relative left-[70%] mt-10 p-2 text-white"
+                ? "bg-gradient-to-r from-[#24A6B2] to-[#00ECCD] w-56 rounded-xl text-xl relative left-[70%] mt-10 p-2 text-white font-bold"
+                : "bg-gradient-to-r from-[#FFABC9] to-[#FFAD32] w-56 rounded-xl text-xl relative left-[70%] mt-10 p-2 text-white font-bold"
             }
           >
             Envoyer à Mano Poto

@@ -18,15 +18,14 @@ import Navlink10 from "../assets/img/Navlink10.png";
 import Navlink11 from "../assets/img/Navlink11.png";
 
 const Navbar = () => {
-
   const { basket } = useContext(ColorContext);
 
   return (
     <div className="bg-white fixed shadow w-full z-10">
-      <div className="flex justify-center align-top h-16">
+      <div className="flex justify-center align-top h-16 mb-2">
         <img src={NavbarUp} />
         <Link to="/basket">
-        <img src={!basket ? EmptyCart : FullCart} />
+          <img src={!basket ? EmptyCart : FullCart} />
         </Link>
       </div>
       <div className="flex justify-center align-top h-10">
